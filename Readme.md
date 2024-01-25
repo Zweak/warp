@@ -18,7 +18,7 @@ version: '3'
 
 services:
   warp:
-    image: caomingjun/warp
+    image: zweak/warp
     container_name: warp
     restart: always
     ports:
@@ -33,6 +33,9 @@ services:
       - net.ipv4.conf.all.src_valid_mark=1
     volumes:
       - ./data:/var/lib/cloudflare-warp
+
+networks:
+  warp1:
 ```
 
 Try it out to see if it works:
